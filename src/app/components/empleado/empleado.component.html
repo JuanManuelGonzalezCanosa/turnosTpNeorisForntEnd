@@ -1,0 +1,27 @@
+<h4> LISTA EMPLEADOS </h4>
+<div>
+        <table class = "table table-striped" >
+            <thead class = "table table-dark">
+                <tr>
+                    <th scope = "col"> Id </th>
+                    <th scope = "col"> Nombre </th>
+                    <th scope = "col"> Apellido </th>
+                    <th scope = "col"> Dni </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleados of empleados">
+                    <td> {{empleados.id}} </td>
+                    <td> {{empleados.nombre}} </td>
+                    <td> {{empleados.apellido}} </td>
+                    <td> {{empleados.dni}} </td>
+                    <td>
+                        <button (click)="modificarEmpleadoId(empleados.id)" class="btn btn-info">Modificar</button>
+                        <button (click)="eliminarEmpleadoId(empleados.id)" class="btn btn-danger" style="margin-left : 10px">Eliminar</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
